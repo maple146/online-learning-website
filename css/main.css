@@ -261,3 +261,51 @@ textarea {
   }
 }
 
+/* My code */
+
+.wrapper {
+  margin-right: auto;
+  margin-left: auto;
+  max-width:1160px;
+  padding-right: 10px;
+  padding-left: 10px;
+  background-color: rgba(138, 138, 138, 0.692);
+  border: 1px solid red;
+  height: 100%;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100vh auto auto;
+    /* height: 100%; */
+  }
+
+  header {
+    border: 1px solid cyan;
+    background: rgb(255, 164, 199);
+  }
+
+  header .nav-block {
+    border: 1px solid red;
+  }
+
+  header .header-block {
+    border: 1px solid blue;
+  }
+
+  main {
+    border: 1px solid cyan;
+    background: rgb(164, 211, 255);
+  }
+
+  footer {
+    border: 1px solid cyan;
+    background: rgb(175, 255, 164);
+  }
+
+  .main-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
