@@ -285,6 +285,11 @@ textarea {
 	box-sizing: border-box;
 }
 
+body {
+  /* Navbar fix */
+  margin-top: -6rem; 
+}
+
 :root {
 	--max-width: 1200px;
 	--lighter-color: #fafafa;
@@ -305,9 +310,6 @@ li {
 
 a {
   text-decoration: none;
-  color: var(--darker-color);
-  padding: 0 2rem;
-  background-color: rgba(255, 0, 0, 0.5);
 }
 
 input {
@@ -343,7 +345,7 @@ input {
 .grid {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto 100vh auto 200px;
+  grid-template-rows: 6rem 100vh auto 200px;
 }
 
 /* 01. Grid layout */
@@ -357,20 +359,29 @@ nav {
 
   position: sticky;
   top: 0;
-  margin-top: -5rem;
   padding: 0rem 6rem;
 
-  border: 2px solid rgb(255, 255, 255);
   background: transparent;
+  transition: all 0.5s ease;
 }
 
-.current {
-  background: var(--dark-color);
-  color: var(--lighter-color);
+nav > h2 > a,
+nav > ul > li > a {
+  color: white;
+  padding: 0 1.5rem;
+}
+
+nav > ul > li > a {
+  font-size: 1.25rem;
+}
+
+.current-item {
+  text-decoration: solid underline #7774e4 3px;
+  font-weight: bold;
 }
 
 .change-navbar-color {
-  background: rgba(108, 213, 255, 0.5);
+  background: white;
 }
 
 /* 02. Nav */
