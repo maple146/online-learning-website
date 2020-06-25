@@ -326,15 +326,21 @@ input {
   height: 100%;
   width: 100%;
   /* border: 0.001rem solid red; */
+  border: 1px solid cyan;
   }
 
 .section-title {
-  padding-top: 4rem;
+  /* Prevents the navbar from covering the title */
+  padding-top: 2rem;
   text-align: center;
+  font-size: 2rem;
+  color: white;
+
+  border: 1px solid yellow;
 }
 
 .section-content {
-  text-align: center;
+  border: 1px solid magenta;
 }
 
 
@@ -345,6 +351,7 @@ input {
 .grid {
   display: grid;
   grid-template-columns: 1fr;
+  /* Navbar Header Main Footer */
   grid-template-rows: 6rem 100vh auto 200px;
 }
 
@@ -404,17 +411,90 @@ header {
 /* CHECK */
 
 main {
-  background: rgb(164, 211, 255);
+  background: gray;
 }
 
 .main-grid {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
 }
 
-.courses, .teachers, .about, .contact {
-  height: 800px;
+.courses {
+  background: linear-gradient(to bottom, #7774e4 40%, white 0%);
+}
+
+.courses .wrapper .section-content {
+  display: grid;
+  /* grid-auto-flow: column; */
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  gap: 2rem;
+  padding: 6rem 3rem;
+}
+
+.course-card {
+  border: 1px solid black;
+  /* width: 20rem; */
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 4fr 4fr 1fr;
+  background: white;
+}
+
+.course-card-image {
+  /* height: 200px; */
+  height: 100%;
+}
+
+#first-card {
+  background-image: url(/img/img_1.jpg);
+  background-size: cover;
+}
+
+#second-card {
+  background-image: url(/img/img_2.jpg);
+  background-size: cover;
+}
+#third-card {
+  background-image: url(/img/img_3.jpg);
+  background-size: cover;
+}
+
+.course-card-info {
+  padding: 1rem;
+}
+
+.course-card-stats {
+  display: grid;
+  grid-template-columns: 3.5fr 1fr;
+}
+
+.course-card-stats p {
+  border: 1px solid gray;
+  padding: 0rem 1rem;
+  margin: 0;
+
+  display: flex;
+  align-items: center;
+}
+
+#card-total-students {
+  justify-content: left;
+}
+
+#card-total-comments {
+  justify-content: center;
+}
+
+.courses .wrapper .section-content a {
+  border: 1px solid cyan;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  grid-row: 2/3;
+  grid-column: 2/3;
+  margin-top: 3rem;
 }
 
 /* 04. Main */
