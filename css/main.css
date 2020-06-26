@@ -577,5 +577,80 @@ form h3 {
 }
 
 .button-primary:hover{
-background-color: #5a50e5;
+  background-color: #5a50e5;
 }
+
+/* Teachers section */
+
+.teachers {
+  background-color: white;
+}
+
+.teachers .wrapper .section-title {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.teachers .wrapper .section-title p {
+  width: 50%;
+  color: gray;
+  border: 1px solid red;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.teachers .wrapper .section-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 2rem;
+  padding: 6rem 3rem;
+}
+
+.teacher-card {
+  border: 1px solid black;
+  background: white;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  border: 1px solid black;
+}
+
+.teacher-card-image {
+  height: 150px;
+  width: 150px;
+  border-radius: 100%;
+  /* How to do it with flex? Alternatives */
+  display:block;
+  margin:auto;
+  position: relative;
+  margin-top: -50px; 
+}
+
+.teacher-card-info {
+  text-align: center;
+  padding: 1rem;
+}
+
+.teacher-card-info h2 {
+  color: darkgray;
+}
+
+#first-teacher {
+  background-image: url(/img/person_1.jpg);
+  background-size: cover;
+}
+
+#second-teacher {
+  background-image: url(/img/person_2.jpg);
+  background-size: cover;
+}
+
+#third-teacher {
+  background-image: url(/img/person_3.jpg);
+  background-size: cover;
+}
+
