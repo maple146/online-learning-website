@@ -332,15 +332,29 @@ input {
 .section-title {
   /* Prevents the navbar from covering the title */
   padding-top: 2rem;
-  text-align: center;
-  font-size: 2rem;
-  color: white;
 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  color: black;
+  font-size: 2rem;
   border: 1px solid yellow;
 }
 
 .section-content {
   border: 1px solid magenta;
+  gap: 2rem;
+  padding: 6rem 3rem;
+}
+
+.section-title p {
+  width: 50%;
+  color: gray;
+  border: 1px solid red;
+  font-size: 1.5rem;
+  margin: 0;
 }
 
 
@@ -429,8 +443,6 @@ main {
   /* grid-auto-flow: column; */
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto 1fr;
-  gap: 2rem;
-  padding: 6rem 3rem;
 }
 
 .course-card {
@@ -586,28 +598,10 @@ form h3 {
   background-color: white;
 }
 
-.teachers .wrapper .section-title {
-  color: black;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* justify-content: center; */
-}
-
-.teachers .wrapper .section-title p {
-  width: 50%;
-  color: gray;
-  border: 1px solid red;
-  font-size: 1.5rem;
-  margin: 0;
-}
-
 .teachers .wrapper .section-content {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
-  gap: 2rem;
-  padding: 6rem 3rem;
 }
 
 .teacher-card {
@@ -654,3 +648,73 @@ form h3 {
   background-size: cover;
 }
 
+/* Programs section */
+
+.programs {
+  background: white;
+}
+
+.programs .section-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  padding-top: 3rem;
+}
+
+.program-image {
+/* https://stackoverflow.com/questions/600743/how-to-get-div-height-to-auto-adjust-to-background-size */
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 0;
+  padding-top: 66.64%
+}
+
+.program-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#program-image-one {
+  background-image: url(/img/undraw_youtube_tutorial.svg);
+  grid-column: 1/3;
+  grid-row: 1/2;
+  border: 1px solid rgba(0, 0, 255, 0.5);
+}
+
+#program-info-one {
+  grid-column: 3/4;
+  grid-row: 1/2;
+  border: 1px solid rgba(255, 0, 0, 0.5);
+}
+
+#program-image-two {
+  background-image: url(/img/undraw_teaching.svg);
+  grid-column: 2/4;
+  grid-row: 2/3;
+  border: 1px solid rgba(0, 0, 255, 0.5);
+}
+
+#program-info-two {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  border: 1px solid rgba(255, 0, 0, 0.5);
+}
+
+#program-image-three {
+  background-image: url(/img/undraw_teacher.svg);
+  grid-column: 1/3;
+  grid-row: 3/4;
+  border: 1px solid rgba(0, 0, 255, 0.5);
+}
+
+#program-info-three {
+  grid-column: 3/4;
+  grid-row: 3/4;
+  border: 1px solid rgba(255, 0, 0, 0.5);
+}
+
+/* Programs section */
