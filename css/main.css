@@ -572,8 +572,8 @@ form h3 {
 
 .form-group {
   border: 1px solid lightgray;
-  padding: .75rem;
-  margin: 1rem 0rem;
+  padding: 1rem;
+  margin:  1rem 0rem 1rem 0rem;
   border-radius: .25rem;
   background: white;
 }
@@ -781,14 +781,15 @@ form h3 {
 
 .contact .wrapper form {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 0.10fr 1fr;
   grid-template-rows: 2fr 1fr 1fr 1fr 5fr;
   background: none;
-  gap: 0.5rem 2rem;
+  /* gap: 1rem 2rem; */
 }
 
 .contact .wrapper form .section-title {
-  grid-column: 1/3;
+  grid-column: 1/4;
+  margin-bottom: 1rem;
 }
 
 .contact .wrapper form #first-name.form-group {
@@ -796,19 +797,19 @@ form h3 {
 }
 
 .contact .wrapper form #last-name.form-group {
-  grid-column: 2/3;
+  grid-column: 3/4;
 }
 
 .contact .wrapper form #subject.form-group {
-  grid-column: 1/3;
+  grid-column: 1/4;
 }
 
 .contact .wrapper form #email.form-group {
-  grid-column: 1/3;
+  grid-column: 1/4;
 }
 
 .contact .wrapper form #message.form-group {
-  grid-column: 1/3;
+  grid-column: 1/4;
 }
 
 .contact .wrapper form .section-title h2,
