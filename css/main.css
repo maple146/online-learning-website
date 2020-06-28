@@ -353,7 +353,7 @@ input {
   width: 50%;
   color: gray;
   border: 1px solid red;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin: 0;
 }
 
@@ -553,7 +553,7 @@ footer {
 }
 
 .form-section {
-  /* border: 1px solid green; */
+  border: 1px solid green;
   grid-column: 3/4;
 }
 
@@ -575,6 +575,7 @@ form h3 {
   padding: .75rem;
   margin: 1rem 0rem;
   border-radius: .25rem;
+  background: white;
 }
 
 .button-primary {
@@ -766,3 +767,59 @@ form h3 {
 }
 
 /* About us section */
+
+/* Contact us section */
+
+.contact {
+  background: #f8f9fa;
+}
+
+.contact .wrapper {
+  border: 1px solid black;
+  width: 40%;
+}
+
+.contact .wrapper form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2fr 1fr 1fr 1fr 5fr;
+  background: none;
+  gap: 0.5rem 2rem;
+}
+
+.contact .wrapper form .section-title {
+  grid-column: 1/3;
+}
+
+.contact .wrapper form #first-name.form-group {
+  grid-column: 1/2;
+}
+
+.contact .wrapper form #last-name.form-group {
+  grid-column: 2/3;
+}
+
+.contact .wrapper form #subject.form-group {
+  grid-column: 1/3;
+}
+
+.contact .wrapper form #email.form-group {
+  grid-column: 1/3;
+}
+
+.contact .wrapper form #message.form-group {
+  grid-column: 1/3;
+}
+
+.contact .wrapper form .section-title h2,
+.contact .wrapper form .section-title p {
+  width: 100%;
+  text-align: left;
+}
+
+.contact .wrapper form .section-title h2 {
+  /* padding: 0; */
+  margin: 0;
+}
+
+/* Contact us section */
