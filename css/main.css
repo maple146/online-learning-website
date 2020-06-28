@@ -366,7 +366,7 @@ input {
   display: grid;
   grid-template-columns: 1fr;
   /* Navbar Header Main Footer */
-  grid-template-rows: 6rem 100vh auto 200px;
+  grid-template-rows: 6rem 100vh auto auto;
 }
 
 /* 01. Grid layout */
@@ -513,10 +513,6 @@ main {
 
 /* 05. Footer */
 
-footer {
-  display: flex;
-  background: rgb(175, 255, 164);
-}
 
 /* 05. Footer */
 
@@ -723,7 +719,8 @@ form h3 {
 /* About us section */
 
 .about-us {
-  background: lightblue;
+  /* background: lightblue; */
+  background: white;
 }
 
 .about-us .wrapper .section-content {
@@ -782,7 +779,7 @@ form h3 {
 .contact .wrapper form {
   display: grid;
   grid-template-columns: 1fr 0.10fr 1fr;
-  grid-template-rows: 2fr 1fr 1fr 1fr 5fr;
+  grid-template-rows: 2fr 1fr 1fr 1fr 4fr;
   background: none;
   /* gap: 1rem 2rem; */
 }
@@ -824,3 +821,45 @@ form h3 {
 }
 
 /* Contact us section */
+
+/* Footer */
+
+footer .wrapper .section-content {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  padding: 2rem;
+}
+
+footer .wrapper .section-content .our-mission-section {
+  grid-column: 1/2;
+}
+
+footer .wrapper .section-content .subscribe-section {
+  grid-column: 2/3;
+}
+
+.subscribe-action {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.subscribe-action .form-group {
+  width: 60%;
+  border-radius: 0;
+}
+
+.subscribe-action a {
+  width: 40%;
+  /* border: 1px solid red; */
+  height: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0;
+  font-size: 0.75rem;
+}
+
+/* Footer */
