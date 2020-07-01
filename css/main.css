@@ -13,7 +13,7 @@
 
 html {
   color: #222;
-  font-size: 1em;
+  font-size: 1.05rem;
   line-height: 1.4;
   scroll-behavior: smooth;
 }
@@ -287,7 +287,8 @@ textarea {
 
 body {
   /* Navbar fix */
-  margin-top: -6rem; 
+  margin-top: -6rem;
+  /* font-weight: 300; */
 }
 
 :root {
@@ -349,11 +350,17 @@ input {
   padding: 6rem 3rem;
 }
 
+p {
+  color: gray;
+  /* color: red !important; */
+  font-size: 1.2rem;
+  border: 1px solid cyan;
+}
+
 .section-title p {
   width: 50%;
-  color: gray;
   border: 1px solid red;
-  font-size: 1.2rem;
+  /* Fix this */
   margin: 0;
 }
 
@@ -543,10 +550,11 @@ main {
   font-size: 2.5rem;
 }
 
-.intro-section p {
+/* .intro-section p {
   font-size: 1.2rem;
   color: lightgray;
-}
+  border: 1px solid magenta;
+} */
 
 .form-section {
   border: 1px solid green;
@@ -554,7 +562,6 @@ main {
 }
 
 form {
-  /* border: 1px solid red; */
   background: white;
   padding: 3rem 2rem;
   border-radius: .5rem;
@@ -574,6 +581,14 @@ form h3 {
   background: white;
 }
 
+.contact .wrapper .form-section {
+  display: grid;
+  grid-template-columns: 1fr 0.10fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 4fr;
+  /* gap: 1rem 2rem; */
+  background: none;
+}
+
 .button-primary {
   background-color: #7774e4;
   color: white;
@@ -585,7 +600,7 @@ form h3 {
   cursor: pointer;
 }
 
-.button-primary:hover{
+.button-primary:hover {
   background-color: #5a50e5;
 }
 
@@ -776,17 +791,17 @@ form h3 {
   width: 40%;
 }
 
-.contact .wrapper form {
-  display: grid;
-  grid-template-columns: 1fr 0.10fr 1fr;
-  grid-template-rows: 2fr 1fr 1fr 1fr 4fr;
-  background: none;
-  /* gap: 1rem 2rem; */
+
+
+.contact .wrapper .section-title {
+  margin-bottom: 2rem;
+  border: 1px solid green;
 }
 
-.contact .wrapper form .section-title {
-  grid-column: 1/4;
-  margin-bottom: 1rem;
+.contact .wrapper .section-title h2,
+.contact .wrapper .section-title p {
+  width: 100%;
+  text-align: left;
 }
 
 .contact .wrapper form #first-name.form-group {
@@ -807,17 +822,6 @@ form h3 {
 
 .contact .wrapper form #message.form-group {
   grid-column: 1/4;
-}
-
-.contact .wrapper form .section-title h2,
-.contact .wrapper form .section-title p {
-  width: 100%;
-  text-align: left;
-}
-
-.contact .wrapper form .section-title h2 {
-  /* padding: 0; */
-  margin: 0;
 }
 
 /* Contact us section */
