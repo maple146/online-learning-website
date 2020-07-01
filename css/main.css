@@ -13,7 +13,7 @@
 
 html {
   color: #222;
-  font-size: 1.05rem;
+  font-size: 1rem;
   line-height: 1.4;
   scroll-behavior: smooth;
 }
@@ -272,9 +272,10 @@ textarea {
 03. Header
 04. Main
   a.Courses
-  b.Teachers
-  c.About
-  d.Contact
+  b.Programs
+  c.Teachers
+  d.Why choose us
+  e.Contact
 05. Footer
 ====================================================== 
 */
@@ -292,7 +293,10 @@ body {
 }
 
 :root {
-	--max-width: 1200px;
+  --max-width: 1200px;
+  --primary-color-light: #8b88f5;
+  --primary-color: #7774e4;
+  --primary-color-dark: #5a50e5;
 	--lighter-color: #fafafa;
 	--light-color: #f3f3f3;
 	--gray-color: #c4c4c4;
@@ -315,6 +319,7 @@ a {
 
 input {
   border: none;
+  background-color: var(--lighter-color);
 }
 
 .wrapper {
@@ -326,9 +331,14 @@ input {
   /* background-color: rgba(138, 138, 138, 0.493); */
   height: 100%;
   width: 100%;
-  /* border: 0.001rem solid red; */
   border: 1px solid cyan;
   }
+
+.section-content {
+  border: 1px solid magenta;
+  gap: 2rem;
+  padding: 8.5rem 3rem;
+}
 
 .section-title {
   /* Prevents the navbar from covering the title */
@@ -339,15 +349,19 @@ input {
   align-items: center;
   text-align: center;
 
-  color: black;
-  font-size: 2rem;
-  border: 1px solid yellow;
+  border: 1px solid rgb(223, 106, 51);
 }
 
-.section-content {
-  border: 1px solid magenta;
-  gap: 2rem;
-  padding: 6rem 3rem;
+.section-title h2 {
+  color: var(--darker-color);
+  font-size: 3rem;
+  border: 1px solid blue;
+  margin: 2rem 0rem 1rem 0rem;
+}
+
+.section-title p {
+  width: 50%;
+  border: 1px solid red;
 }
 
 p {
@@ -357,22 +371,15 @@ p {
   border: 1px solid cyan;
 }
 
-.section-title p {
-  width: 50%;
-  border: 1px solid red;
-  /* Fix this */
-  margin: 0;
-}
-
 form {
-  background: white;
+  background: var(--lighter-color);
   border-radius: .5rem;
   gap: 1rem;
   /* background: rgba(214, 68, 68, 0.486) !important; */
 }
 
 form h2 {
-  color: black;
+  color: var(--darker-color);
   margin: 0;
   padding: 0;
 }
@@ -381,9 +388,21 @@ form h2 {
   border: 1px solid lightgray;
   padding: .75rem;
   border-radius: .25rem;
-  background: white;
+  background: var(--lighter-color);
 }
 
+.button-primary {
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 2rem;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.button-primary:hover {
+  background-color: var(--primary-color-dark);
+}
 
 /* 00. Global variables & Utility classes */
 
@@ -415,7 +434,7 @@ nav {
 
 nav > h2 > a,
 nav > ul > li > a {
-  color: white;
+  color: var(--lighter-color);
   padding: 0 1.5rem;
 }
 
@@ -424,12 +443,12 @@ nav > ul > li > a {
 }
 
 .current-item {
-  text-decoration: solid underline #7774e4 3px;
+  text-decoration: solid underline var(--primary-color) 3px;
   font-weight: bold;
 }
 
 .change-navbar-color {
-  background: white;
+  background: var(--lighter-color);
 }
 
 /* 02. Nav */
@@ -441,19 +460,46 @@ header {
   background-image: url(/img/hero_1.jpg);
   background-size: cover;
   display: flex;
-  color: white;
+  color: var(--lighter-color);
   box-shadow: inset 0 0 0 1000px rgba(52, 58, 64, 0.9);
+}
+
+.header-block {
+  display: grid;
+  grid-template-columns: 3.5fr 1fr 3fr;
+  grid-template-rows: 1fr;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+  padding: 2rem;
+}
+
+.header-block .intro-section {
+  grid-column: 1/2;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.header-block .intro-section h1 {
+  font-size: 2.5rem;
+}
+
+.header-block .form-section {
+  border: 1px solid green;
+  grid-column: 3/4;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: .5fr 1fr 1fr 1fr;
+  padding: 2rem;
 }
 
 /* 03. Header */
 
 /* 04. Main */
-
-/* CHECK */
-
-main {
-  background: gray;
-}
 
 .main-grid {
   display: grid;
@@ -461,29 +507,38 @@ main {
   grid-template-rows: auto;
 }
 
+/* 04.a Courses */
+
 .courses {
-  background: linear-gradient(to bottom, #7774e4 40%, white 0%);
+  background: linear-gradient(to bottom, var(--primary-color) 40%, var(--light-color) 0%);
 }
 
 .courses .wrapper .section-content {
   display: grid;
-  /* grid-auto-flow: column; */
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto 1fr;
 }
 
+.courses .wrapper .section-content a {
+  border: 1px solid rgb(30, 255, 0);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  grid-row: 2/3;
+  grid-column: 2/3;
+  margin-top: 2rem;
+}
+
 .course-card {
-  border: 1px solid black;
-  /* width: 20rem; */
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 4fr 4fr 1fr;
-  background: white;
+  grid-template-rows: 200px .75fr .1fr;
+  background: var(--lighter-color);
+  border: 1px solid red;
 }
 
 .course-card-image {
-  /* height: 200px; */
-  height: 100%;
+  background-color: blue;
 }
 
 #first-card {
@@ -501,7 +556,16 @@ main {
 }
 
 .course-card-info {
-  padding: 1rem;
+  padding: 1.5rem 1rem;
+}
+
+.course-card-info h2 {
+  color: var(--primary-color-light);
+}
+
+.course-card-info h2,
+.course-card-info p {
+  margin: .5rem 0rem;
 }
 
 .course-card-stats {
@@ -510,147 +574,35 @@ main {
 }
 
 .course-card-stats p {
-  border: 1px solid gray;
-  padding: 0rem 1rem;
+  border-top: 1px solid var(--gray-color);
   margin: 0;
+  padding: 1rem 1rem;
 
   display: flex;
   align-items: center;
 }
 
-#card-total-students {
+#card-stats-total-students {
   justify-content: left;
+  border-right: 1px solid var(--gray-color);
 }
 
-#card-total-comments {
+#card-stats-total-comments {
   justify-content: center;
 }
 
-.courses .wrapper .section-content a {
-  border: 1px solid cyan;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  grid-row: 2/3;
-  grid-column: 2/3;
-  margin-top: 3rem;
+#card-info-small-paragraph,
+#card-stats-total-students,
+#card-stats-total-comments {
+  font-size: 1.05rem;
 }
 
-/* 04. Main */
+/* 04.a Courses */
 
-/* 05. Footer */
-
-
-/* 05. Footer */
-
-.header-block {
-  /* border: 1px solid red; */
-  display: grid;
-  grid-template-columns: 3.5fr 1fr 3fr;
-  grid-template-rows: 1fr;
-  grid-auto-flow: column;
-  align-items: center;
-  justify-content: space-around;
-  height: 100%;
-  padding: 2rem;
-}
-
-.intro-section {
-  /* border: 1px solid blue; */
-  grid-column: 1/2;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-
-.intro-section h1 {
-  font-size: 2.5rem;
-}
-
-header .wrapper .header-block .form-section {
-  border: 1px solid green;
-  grid-column: 3/4;
-
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: .5fr 1fr 1fr 1fr;
-  padding: 2rem;
-}
-
-.button-primary {
-  background-color: #7774e4;
-  color: white;
-  border-radius: 2rem;
-  padding: 1rem 2rem;
-  text-transform: uppercase;
-  cursor: pointer;
-}
-
-.button-primary:hover {
-  background-color: #5a50e5;
-}
-
-/* Teachers section */
-
-.teachers {
-  background-color: white;
-}
-
-.teachers .wrapper .section-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-}
-
-.teacher-card {
-  border: 1px solid black;
-  background: white;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr;
-  border: 1px solid black;
-}
-
-.teacher-card-image {
-  height: 150px;
-  width: 150px;
-  border-radius: 100%;
-  /* How to do it with flex? Alternatives */
-  display:block;
-  margin:auto;
-  position: relative;
-  margin-top: -50px; 
-}
-
-.teacher-card-info {
-  text-align: center;
-  padding: 1rem;
-}
-
-.teacher-card-info h2 {
-  color: darkgray;
-}
-
-#first-teacher {
-  background-image: url(/img/person_1.jpg);
-  background-size: cover;
-}
-
-#second-teacher {
-  background-image: url(/img/person_2.jpg);
-  background-size: cover;
-}
-
-#third-teacher {
-  background-image: url(/img/person_3.jpg);
-  background-size: cover;
-}
-
-/* Programs section */
+/* 04.b Programs */
 
 .programs {
-  background: white;
+  background: var(--light-color);
 }
 
 .programs .section-content {
@@ -716,67 +668,124 @@ header .wrapper .header-block .form-section {
   border: 1px solid rgba(255, 0, 0, 0.5);
 }
 
-/* Programs section */
+/* 04.b Programs */
 
-/* About us section */
 
-.about-us {
-  /* background: lightblue; */
-  background: white;
+/* 04.c Teachers */
+
+.teachers {
+  background-color: var(--light-color);
 }
 
-.about-us .wrapper .section-content {
-  /* display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto; */
-  /* padding: 0rem 2rem; */
-  padding: 0rem 0rem 0rem 8rem;
-  display: flex;
-  width: 100%;
+.teachers .wrapper .section-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
 }
 
-.about-us-box {
+.teacher-card {
+  background: var(--lighter-color);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  border: 1px solid var(--gray-color);
+}
+
+.teacher-card-image {
+  height: 150px;
+  width: 150px;
+  border-radius: 100%;
+  display: block;
+  margin: auto;
+  position: relative;
+  margin-top: -50px; 
+}
+
+.teacher-card-info {
+  text-align: center;
+  padding: 1rem;
+}
+
+.teacher-card-info h2 {
+  color: var(--darker-color);
+}
+
+.teacher-card-info h3 {
+  color: var(--gray-color);
+}
+
+.teacher-card-info > * {
+  margin: .5rem 0rem;
+}
+
+#first-teacher {
+  background-image: url(/img/person_1.jpg);
+  background-size: cover;
+}
+
+#second-teacher {
+  background-image: url(/img/person_2.jpg);
+  background-size: cover;
+}
+
+#third-teacher {
+  background-image: url(/img/person_3.jpg);
+  background-size: cover;
+}
+
+/* 04.c Teachers */
+
+/* 04.d Why choose us */
+
+.why-choose-us {
+  background: var(--light-color);
+}
+
+.why-choose-us .wrapper .section-content {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: 100% auto;
+  padding-bottom: 3rem;
+  gap: 0;
+}
+
+.why-choose-us-box {
+  grid-column: 2/5;
+  grid-row: 1/2;
   background: white;
   border: 1px solid red;
   height: 100%;
-  width: 40%;
-
   padding: 1rem;
 }
 
-.about-us-box p {
+.why-choose-us-box p {
   border: 1px solid magenta;
-  width: 100%;
-  padding: 1rem;
 }
 
-.about-us-person {
+.why-choose-us-person {
+  grid-column: 5/11;
+
   background-image: url(/img/person_transparent.png);
   background-size: contain;
-  /* height: 100%; */
-  width: 90%;
-  padding-top: 75%;
   background-repeat: no-repeat;
   background-position: right;
+  width: 100%;
+  height: 0;
+  padding-top: 100%;
 
   border: 1px solid blue;
-  
-  /* grid-column: 5/11;
-  grid-row: 1/3; */
 }
 
-/* About us section */
+/* 04.d Why choose us */
 
-/* Contact us section */
+/* 04.e Contact */
 
 .contact {
-  background: #f8f9fa;
+  background: var(--light-color);
 }
 
 .contact .wrapper {
-  border: 1px solid black;
-  width: 35%;
-  padding: 2rem 0rem 4rem 0rem;
+  width: 40%;
 }
 
 .contact .wrapper .form-section {
@@ -784,18 +793,14 @@ header .wrapper .header-block .form-section {
   grid-template-columns: 1fr 0.005fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 6fr;
   background: none;
-}
-
-.contact .wrapper .section-title {
-  margin-bottom: 2rem;
-  border: 1px solid green;
+  padding: 3rem 0rem;
+  border: 1px solid blue;
 }
 
 .contact .wrapper .section-title h2,
 .contact .wrapper .section-title p {
   width: 100%;
   text-align: left;
-  margin: 0;
 }
 
 .contact .wrapper form #first-name.form-group {
@@ -818,9 +823,9 @@ header .wrapper .header-block .form-section {
   grid-column: 1/4;
 }
 
-/* Contact us section */
+/* 04.e Contact */
 
-/* Footer */
+/* 05. Footer */
 
 footer .wrapper .section-content {
   display: grid;
@@ -828,11 +833,11 @@ footer .wrapper .section-content {
   padding: 2rem;
 }
 
-footer .wrapper .section-content .our-mission-section {
+.section-content .our-mission-section {
   grid-column: 1/2;
 }
 
-footer .wrapper .section-content .subscribe-section {
+.section-content .subscribe-section {
   grid-column: 2/3;
 }
 
@@ -851,7 +856,6 @@ footer .wrapper .section-content .subscribe-section {
 
 .subscribe-action a {
   width: 40%;
-  /* border: 1px solid red; */
   height: 3.5rem;
   display: flex;
   justify-content: center;
@@ -860,4 +864,4 @@ footer .wrapper .section-content .subscribe-section {
   font-size: 0.75rem;
 }
 
-/* Footer */
+/* 05. Footer */
