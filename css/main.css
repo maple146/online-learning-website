@@ -442,7 +442,7 @@ nav > ul > li > a {
   font-size: 1.25rem;
 }
 
-.current-item {
+.active {
   text-decoration: solid underline var(--primary-color) 3px;
   font-weight: bold;
 }
