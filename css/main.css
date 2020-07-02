@@ -430,6 +430,8 @@ nav {
 
   background: transparent;
   transition: all 0.5s ease;
+  z-index: 2;
+  box-shadow: 4px 0 20px -5px rgba(0, 0, 0, 0.2);
 }
 
 nav > h2 > a,
