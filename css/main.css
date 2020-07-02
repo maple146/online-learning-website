@@ -368,7 +368,7 @@ p {
   color: gray;
   /* color: red !important; */
   font-size: 1.2rem;
-  border: 1px solid cyan;
+  /* border: 1px solid cyan; */
 }
 
 form {
@@ -520,7 +520,7 @@ header {
 }
 
 .courses .wrapper .section-content a {
-  border: 1px solid rgb(30, 255, 0);
+  /* border: 1px solid rgb(30, 255, 0); */
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -534,11 +534,18 @@ header {
   grid-template-columns: 1fr;
   grid-template-rows: 200px .75fr .1fr;
   background: var(--lighter-color);
-  border: 1px solid red;
+  /* border: 1px solid red; */
+  position: relative;
+  top: 0;
+  box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.3);
+  transition: .3s all ease-in-out;
 }
 
-.course-card-image {
-  background-color: blue;
+.course-card:hover{
+  position:relative;
+  top: -1rem;
+  box-shadow: 0 10px 20px -1px rgba(0, 0, 0, 0.3);
+  transition: .3s all ease-in-out;
 }
 
 #first-card {
