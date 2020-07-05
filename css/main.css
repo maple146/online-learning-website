@@ -331,7 +331,7 @@ input {
   padding-left: 10px;
   /* background-color: rgba(138, 138, 138, 0.493); */
   height: 100%;
-  width: 100%;
+  /* width: 100%; */
   border: 1px solid cyan;
   }
 
@@ -435,7 +435,7 @@ nav {
 
   background: transparent;
   transition: all 0.5s ease;
-  z-index: 2;
+  z-index: 3;
 }
 
 nav > h2 > a,
@@ -748,34 +748,90 @@ header {
 /* 04.d Why choose us */
 
 .why-choose-us {
+  height: 100vh;
+}
+
+/* Blobs background */
+
+.why-choose-us .blob-container {
   background: var(--light-color);
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+
+}
+
+.blob {
+  /* border: 1px solid black; */
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+
+.blob#one {
+  background-image: url(/img/oval_1.svg);
+  top: 0;
+  right: 0;
+  height: 30rem;
+  width: 30rem;
+}
+
+.blob#two {
+  background-image: url(/img/oval_2.svg);
+  background-position: bottom;
+  bottom: 0;
+  left: -150px;
+  height: 40rem;
+  width: 40rem;
+}
+
+/* Blobs background */
+
+.why-choose-us .wrapper {
+  /* background: rgba(255, 0, 0, 0.5); */
+  z-index: 1;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.why-choose-us .wrapper .section-title {
+  height: 20%;
 }
 
 .why-choose-us .wrapper .section-content {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: auto;
+  height: 80%;
   padding: 0;
-  gap: 0;
+  display: grid;
+  grid-template-columns: 8rem 25% 75%;
 }
 
-.why-choose-us-box {
+.section-content .why-choose-us-box {
   background: var(--lighter-color);
-  max-width: 40%;
+  width: max-content;
+  height: max-content;
   padding: 1rem;
-  align-self: flex-start;
-  border: 1px solid red;
+  grid-column: 2/3;
+  box-shadow: 5px 50px -10px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.2);
+  /* border: 1px solid red; */
 }
 
-.why-choose-us-person {
+.section-content .why-choose-us-box p {
+  margin: 2rem 0;
+}
+
+.section-content .why-choose-us-person {
   background-image: url(/img/person_transparent.png);
-  background-size: cover;
+  background-size: contain;
+  background-position: bottom;
   background-repeat: no-repeat;
-  height: 100%;
-  width: 55%;
-  padding-top: 62%;
-  border: 1px solid blue;
+  height: auto;
+  width: 75%;
+  grid-gap: 2/4;
+  /* border: 1px solid white; */
 }
 
 /* 04.d Why choose us */
