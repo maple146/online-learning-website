@@ -11,10 +11,10 @@ function stickyNavbar() {
         // Change navbar background color and list items color
         if (fromTop > 1) {
             navigationBar.classList.add("change-navbar-color");
-            navigationBarLinks.forEach(e => e.style.color = "black");
+            navigationBarLinks.forEach(e => e.style.color = "var(--dark-color)");
         } else {
             navigationBar.classList.remove("change-navbar-color");
-            navigationBarLinks.forEach(e => e.style.color = "white");
+            navigationBarLinks.forEach(e => e.style.color = "var(--light-color)");
         }
 
         // Change navbar size
