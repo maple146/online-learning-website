@@ -667,6 +667,7 @@ header {
 
 #program-image-two {
   background-image: url(/img/undraw_teaching.svg);
+  background-position: right;
   grid-column: 2/4;
   grid-row: 2/3;
   /* border: 1px solid rgba(0, 0, 255, 0.5); */
@@ -729,13 +730,9 @@ header {
   padding: 1rem;
 }
 
-/* .teacher-card-info h2 {
-  color: var(--dark-color);
-}
-
 .teacher-card-info h3 {
-  color: var(--gray-color);
-} */
+  color: var(--dark-gray-color);
+}
 
 .teacher-card-info > * {
   margin: .5rem 0rem;
@@ -755,6 +752,43 @@ header {
   background-image: url(/img/person_3.jpg);
   background-size: cover;
 }
+
+#fourth-teacher {
+  background-image: url(/img/person_4.jpg);
+  background-size: cover;
+}
+
+/* Parallax */
+
+.parallax {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: auto; */
+
+  background-image: url(/img/parallax_bg.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  box-shadow: inset 0 0 0 1000px rgba(42, 41, 70, 0.75);
+}
+
+.parallax .teacher-card {
+  background: none;
+  border: none;
+  width: 50%;
+  padding: 8rem 0rem 4rem 0rem;
+}
+
+.parallax .teacher-card .teacher-card-info#parallax h2,
+.parallax .teacher-card .teacher-card-info#parallax p {
+  color: var(--light-color);
+}
+
+.parallax .teacher-card .teacher-card-info#parallax p {
+  font-style: italic;
+}
+
+/* Parallax */
 
 /* 04.c Teachers */
 
