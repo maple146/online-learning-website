@@ -564,16 +564,17 @@ header {
   transition: .3s all ease-in-out;
 }
 
-#first-card {
+.course-card#first-card .course-card-image {
   background-image: url(/img/img_1.jpg);
   background-size: cover;
 }
 
-#second-card {
+.course-card#second-card .course-card-image {
   background-image: url(/img/img_2.jpg);
   background-size: cover;
 }
-#third-card {
+
+.course-card#third-card .course-card-image {
   background-image: url(/img/img_3.jpg);
   background-size: cover;
 }
@@ -801,12 +802,10 @@ header {
 /* Blobs background */
 
 .why-choose-us .blob-container {
-  /* background: var(--light-color); */
   z-index: -1;
   position: absolute;
   height: 100%;
   width: 100%;
-
 }
 
 .blob {
@@ -877,7 +876,6 @@ header {
   height: auto;
   width: 75%;
   grid-gap: 2/4;
-  /* border: 1px solid white; */
 }
 
 /* 04.d Why choose us */

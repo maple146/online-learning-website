@@ -1,0 +1,339 @@
+/* Large devices (desktops) */
+@media (max-width: 1200px) {
+  .change-navbar-color{
+    background: #4781ff;
+  }
+
+  html {
+    font-size: 0.95rem;
+  }
+
+  /* 02. Nav */
+
+  nav {
+    padding: 0rem 1rem;
+  }
+
+  /* 02. Nav */
+}
+
+/* Medium devices (tablets) */
+@media (max-width: 992px) {
+  .change-navbar-color{
+    background: #7bff47;
+  }
+
+  /* 00. Global variables & Utility classes */
+
+  .button-primary {
+    padding: 0.75rem 1.5rem;
+  }
+
+  .section-content {
+    gap: 1rem;
+    padding: 6rem 1rem;
+  }
+
+  /* 00. Global variables & Utility classes */
+
+
+  /* 02. Nav */
+
+  nav {
+    padding: 0rem 0.5rem;
+  }
+
+  nav > h2 > a,
+  nav > ul > li > a {
+    padding: 0 .5rem;
+  }
+  nav > h2 > a,
+  nav > ul > li > a,
+  nav > a.button-primary {
+    font-size: 1.15rem;
+    font-size: 1.rem;
+    color: green !important;
+  }
+
+  /* 02. Nav */
+
+  /* 04.d Why choose us */
+
+  .why-choose-us .wrapper .section-title {
+    height: 25%;
+  }
+
+  .why-choose-us .wrapper .section-content {
+    height: 75%;
+    grid-template-columns: 4rem 25% 75%;
+  }
+
+  .section-content .why-choose-us-box p {
+    margin: 1.5rem 0;
+}
+
+  /* 04.d Why choose us */
+}
+
+/* Small devices (landscape phones) */
+@media (max-width: 768px) {
+  .change-navbar-color{
+    background: #fff347;
+  }
+
+  /* 02. Nav */
+
+  nav {
+    padding: 0rem 2rem;
+  }
+
+  nav .nav-bar-list,
+  nav a.button-primary {
+    display: none;
+  }
+
+  /* 02. Nav */
+
+  /* 03. Header */
+
+  .header-block {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .header-block .form-section {
+    grid-column: 1/2;
+  }
+
+  .header-block .form-section h2,
+  .header-block .form-section p {
+    text-align: center;
+  }
+
+  .contact .wrapper .section-title,
+  .contact .wrapper .form-section {
+    width: 100%;
+  }
+
+  /* 03. Header */
+
+  /* 04.a Courses */
+
+  .courses .wrapper .section-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 2rem;
+  }
+
+  /* !!!!!!!Remove transitions */
+  /* .course-card,
+  .course-card:hover {
+    transition: none;
+  } */
+
+  .course-card#first-card {
+    grid-row: 1/2;
+  }
+
+  .course-card#second-card {
+    grid-row: 2/3;
+  }
+
+  .course-card#third-card {
+    grid-row: 3/4;
+  }
+
+  .courses .wrapper .section-content a.button-primary {
+    grid-row: 4/5;
+    grid-column: 1/2;
+  }
+
+  /* 04.a Courses */
+
+  /* 04.b Programs */
+
+  .programs .section-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding-top: 3rem;
+    gap: 1rem;
+  }
+
+  .program-image {
+    background-position: center !important;
+  }
+
+  #program-image-one {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  #program-info-one {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+
+  #program-image-two {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+
+  #program-info-two {
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
+
+  #program-image-three {
+    grid-column: 1/2;
+    grid-row: 5/6;
+  }
+
+  #program-info-three {
+    grid-column: 1/2;
+    grid-row: 6/7;
+  }
+
+  /* 04.b Programs */
+
+  /* 04.c Teachers */
+
+  .teachers .wrapper .section-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 5rem;
+  }
+
+  /* 04.c Teachers */
+
+  /* 04.e Contact */
+
+  .contact .wrapper .section-title h2,
+  .contact .wrapper .section-title p{
+    text-align: center;
+  }
+
+  .contact .wrapper .form-section {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 6fr 1fr;
+  }
+
+  .contact .wrapper form #first-name.form-group {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  .contact .wrapper form #last-name.form-group {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+
+  .contact .wrapper form #subject.form-group {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+
+  .contact .wrapper form #email.form-group {
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
+
+  .contact .wrapper form #message.form-group {
+    grid-column: 1/2;
+    grid-row: 5/6;
+  }
+
+  .contact .wrapper a.button-primary {
+    grid-column: 1/2;
+    grid-row: 6/7;
+    justify-self: center;
+  }
+
+  /* 04.e Contact */
+
+  /* 05. Footer */
+
+  footer .wrapper .section-content {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .section-content .our-mission-section {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  .section-content .subscribe-section {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+
+  /* 05. Footer */
+
+}
+
+/* Small devices (smartphones) */
+@media (max-width: 576px) {
+  .change-navbar-color{
+    background: #ff5347;
+  }
+
+  /* 00. Global variables & Utility classes */
+
+  .section-title p {
+    width: 90%;
+  }
+
+  /* 00. Global variables & Utility classes */
+
+  /* 03. Header */
+
+  .header-block {
+    padding: 1rem;
+  }
+
+  .header-block .intro-section {
+    padding: 2rem 0rem 0rem 0rem;
+  }
+
+  header .wrapper .header-block form {
+    gap: 0.5rem;
+  }
+
+  /* 03. Header */
+
+  /* 04.c Teachers */
+
+  .parallax .teacher-card {
+    width: 75%;
+  }
+
+  /* 04.c Teachers */
+
+  /* 04.d Why choose us */
+
+  .why-choose-us .wrapper .section-content {
+    display: grid;
+    grid-template-columns: 10% 1fr 10%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .why-choose-us .wrapper .section-content .why-choose-us-person {
+    display: none;
+  }
+
+  .why-choose-us .wrapper .section-content .why-choose-us-box {
+    grid-column: 2/3;
+    align-self: flex-start;
+    justify-self: center;
+  }
+
+  .section-content .why-choose-us-box p {
+    margin: 2.25rem 0;
+  }
+
+  /* 04.d Why choose us */
+}
