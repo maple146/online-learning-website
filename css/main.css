@@ -412,6 +412,27 @@ form h2 {
   transition: all .25s ease-out;
 }
 
+.fas {
+  margin: 0rem .5rem;
+}
+
+/* Circle background for icons */
+.icon-circle {
+  color: var(--light-color);
+  background: var(--primary-color);
+  padding: 1rem;
+  border-radius: 50%;
+}
+
+.program-info-stats i,
+.why-choose-us-stats i {
+  height: 48px;
+  width: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* 00. Global variables & Utility classes */
 
 /* 01. Grid layout */
@@ -693,6 +714,13 @@ header {
   /* border: 1px solid rgba(255, 0, 0, 0.5); */
 }
 
+.program-info-stats {
+  color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* 04.b Programs */
 
 
@@ -876,6 +904,13 @@ header {
   height: auto;
   width: 75%;
   grid-gap: 2/4;
+}
+
+.why-choose-us-stats {
+  color: var(--dark-gray-color);
+  display: flex;
+  justify-content: left;
+  align-items: center;
 }
 
 /* 04.d Why choose us */
