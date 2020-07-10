@@ -1,7 +1,21 @@
+// Nav section
+// #navigation-bar
 let navigationBar = document.getElementById("navigation-bar");
-// navigationBarLinks includes the site logo as a link so the color gets changed on scroll too
-let navigationBarLinks = document.querySelectorAll(".nav-link"); 
-let navigationBarItems = document.querySelectorAll("nav ul li a");
+
+    // #website-name
+    let websiteName = document.getElementById("website-name");
+
+    // #navigation-bar-list
+    let navigationBarList = document.getElementById("navigation-bar-list");
+
+        // navigationBarListLinks includes the website name as a link
+        let navigationBarListLinks = document.querySelectorAll(".nav-link"); 
+        let navigationBarListItems = document.querySelectorAll("nav ul li a");
+
+    // #mobile-menu-icon
+    let mobileMenuIcon = document.getElementById("mobile-menu-icon");
+
+// Main section
 let mainSections = document.querySelectorAll("main section");
 
 function stickyNavbar() {
@@ -11,10 +25,10 @@ function stickyNavbar() {
         // Change navbar background color and list items color
         if (fromTop > 1) {
             navigationBar.classList.add("change-navbar-color");
-            navigationBarLinks.forEach(e => e.style.color = "var(--dark-color)");
+            navigationBarListLinks.forEach(e => e.style.color = "var(--dark-color)");
         } else {
             navigationBar.classList.remove("change-navbar-color");
-            navigationBarLinks.forEach(e => e.style.color = "var(--light-color)");
+            navigationBarListLinks.forEach(e => e.style.color = "var(--light-color)");
         }
 
         // Change navbar size
@@ -25,7 +39,7 @@ function stickyNavbar() {
         }
 
         // Highlight list current active item
-        navigationBarItems.forEach(link => {
+        navigationBarListItems.forEach(link => {
             let section = document.querySelector(link.hash);
             if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
                 link.classList.add("active");
@@ -33,8 +47,33 @@ function stickyNavbar() {
                 link.classList.remove("active");
             }
         });
-        // console.log(fromTop);
     });
 }
 
 stickyNavbar();
+
+
+function openMenu() {
+    mobileMenuIcon.addEventListener('click', () => {
+        navigationBar.classList.toggle("active-mobile-menu");
+        navigationBarList.classList.toggle("display");
+        websiteName.classList.toggle("hide");
+        console.log("Clicked mobile menu icon")
+    });
+}
+
+openMenu();
+
+
+function closeMenu() {
+    for (let i = 0; i < navigationBarListItems.length; i++) {
+        navigationBarListItems[i].addEventListener('click', () => {
+            navigationBar.classList.remove("active-mobile-menu");
+            navigationBarList.classList.remove("display");
+            websiteName.classList.remove("hide");
+            console.log("Clicked nav link")
+        });
+    }
+}
+
+closeMenu();

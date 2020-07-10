@@ -463,8 +463,10 @@ nav {
   z-index: 3;
 }
 
+
 nav > h2 > a,
-nav > ul > li > a {
+nav > ul > li > a,
+#mobile-menu-icon {
   color: var(--light-color);
   padding: 0 1.5rem;
 }
@@ -481,6 +483,32 @@ nav > ul > li > a {
 .change-navbar-color {
   background: var(--light-color);
   box-shadow: 4px 0 20px -5px rgba(0, 0, 0, 0.2);
+}
+
+#mobile-menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.active-mobile-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh !important;
+  background: var(--primary-color);
+  color: var(--light-color) !important;
+}
+
+.display {
+  display: flex !important;
+  flex-direction: column;
+  font-size: 5rem;
+}
+
+.hide {
+  display: none !important;
 }
 
 /* 02. Nav */
