@@ -1,12 +1,20 @@
+/* ######################## */
 /* Large devices (desktops) */
+/* ######################## */
+
 @media (max-width: 1200px) {
   .change-navbar-color{
-    /* background: #4781ff; */
+    background: #4781ff;
   }
+
+  /* 00. Global variables & Utility classes */
 
   html {
     font-size: 0.95rem;
   }
+
+  /* 00. Global variables & Utility classes */
+
 
   /* 02. Nav */
 
@@ -17,10 +25,14 @@
   /* 02. Nav */
 }
 
+
+/* ######################## */
 /* Medium devices (tablets) */
+/* ######################## */
+
 @media (max-width: 992px) {
   .change-navbar-color{
-    /* background: #7bff47; */
+    background: #7bff47;
   }
 
   /* 00. Global variables & Utility classes */
@@ -45,18 +57,18 @@
 
   nav > h2 > a,
   nav > ul > li > a {
-    padding: 0 .5rem;
+    padding: 0 .35rem;
   }
   
-  nav > h2 > a,
   nav > ul > li > a,
   nav > a.button-primary {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
   }
 
   /* 02. Nav */
 
-  /* 04.d Why choose us */
+
+  /* 04.e Why choose us */
 
   .why-choose-us .wrapper .section-title {
     height: 25%;
@@ -71,14 +83,28 @@
     margin: 1.5rem 0;
 }
 
-  /* 04.d Why choose us */
+  /* 04.e Why choose us */
 }
 
-/* Small devices (landscape phones) */
+
+/* ########################################## */
+/* Medium devices (tablets, landscape phones) */
+/* ########################################## */
+
 @media (max-width: 768px) {
   .change-navbar-color{
-    /* background: #fff347; */
+    background: #fff347;
   }
+
+  /* 00. Global variables & Utility classes */
+
+  .section-content {
+    gap: 1rem;
+    padding: 3rem 6rem;
+  }
+
+  /* 00. Global variables & Utility classes */
+
 
   /* 02. Nav */
 
@@ -101,6 +127,7 @@
   }
 
   /* 02. Nav */
+
 
   /* 03. Header */
 
@@ -125,6 +152,7 @@
 
   /* 03. Header */
 
+
   /* 04.a Courses */
 
   .courses .wrapper .section-content {
@@ -133,12 +161,6 @@
     grid-template-rows: auto;
     gap: 2rem;
   }
-
-  /* !!!!!!!Remove transitions */
-  /* .course-card,
-  .course-card:hover {
-    transition: none;
-  } */
 
   .course-card#first-card {
     grid-row: 1/2;
@@ -158,6 +180,7 @@
   }
 
   /* 04.a Courses */
+
 
   /* 04.b Programs */
 
@@ -205,6 +228,7 @@
 
   /* 04.b Programs */
 
+
   /* 04.c Teachers */
 
   .teachers .wrapper .section-content {
@@ -216,7 +240,8 @@
 
   /* 04.c Teachers */
 
-  /* 04.e Contact */
+
+  /* 04.f Contact */
 
   .contact .wrapper .section-title h2,
   .contact .wrapper .section-title p{
@@ -226,6 +251,7 @@
   .contact .wrapper .form-section {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 6fr 1fr;
+    padding: 3rem 6rem;
   }
 
   .contact .wrapper form #first-name.form-group {
@@ -259,7 +285,8 @@
     justify-self: center;
   }
 
-  /* 04.e Contact */
+  /* 04.f Contact */
+
 
   /* 05. Footer */
 
@@ -279,22 +306,35 @@
   }
 
   /* 05. Footer */
-
 }
 
+
+/* ########################### */
 /* Small devices (smartphones) */
+/* ########################### */
+
 @media (max-width: 576px) {
   .change-navbar-color{
-    /* background: #ff5347; */
+    background: #ff5347;
   }
 
   /* 00. Global variables & Utility classes */
+
+  html {
+    font-size: 0.75rem;
+  }
+
+  .section-content {
+    gap: 1rem;
+    padding: 3rem 0rem;
+  }
 
   .section-title p {
     width: 90%;
   }
 
   /* 00. Global variables & Utility classes */
+
 
   /* 03. Header */
 
@@ -312,6 +352,7 @@
 
   /* 03. Header */
 
+
   /* 04.c Teachers */
 
   .parallax .teacher-card {
@@ -320,13 +361,15 @@
 
   /* 04.c Teachers */
 
-  /* 04.d Why choose us */
+
+  /* 04.e Why choose us */
 
   .why-choose-us .wrapper .section-content {
     display: grid;
     grid-template-columns: 10% 1fr 10%;
     justify-content: center;
     align-items: center;
+    height: 100%;
   }
 
   .why-choose-us .wrapper .section-content .why-choose-us-person {
@@ -340,8 +383,39 @@
   }
 
   .section-content .why-choose-us-box p {
-    margin: 2.25rem 0;
+    margin: 1rem 0;
   }
 
-  /* 04.d Why choose us */
+  /* Blobs background */
+.why-choose-us .blob-container {
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.blob#one {
+  height: 10rem;
+  width: 10rem;
+}
+
+.blob#two {
+  left: 0px;
+  height: 20rem;
+  width: 20rem;
+}
+/* Blobs background */
+
+  /* 04.e Why choose us */
+
+
+  /* 04.f Contact */
+
+  .contact .wrapper .form-section {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 6fr 1fr;
+    padding: 3rem 2rem;
+  }
+
+  /* 04.f Contact */
 }
