@@ -491,6 +491,10 @@ nav > ul > li > a,
   cursor: pointer;
 }
 
+#mobile-contact-us {
+  display: none;
+}
+
 .active-mobile-menu {
   display: flex;
   flex-direction: column;
@@ -511,6 +515,11 @@ nav > ul > li > a,
 .hide {
   display: none !important;
 }
+
+.stop-scrolling { 
+  height: 100%; 
+  overflow: hidden; 
+} 
 
 /* 02. Nav */
 
@@ -1029,6 +1038,4 @@ footer .wrapper .section-content {
   background: #000 !important;
   color: #0f0 !important;
   outline: solid #f00 1px !important;
-  margin: 0;
-  padding: 0;
 } */

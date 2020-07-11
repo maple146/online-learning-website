@@ -22,7 +22,7 @@ function stickyNavbar() {
     window.addEventListener("scroll", () => {
         let fromTop = window.scrollY;
 
-        // Change navbar background color and list items color
+        // Change navbar background color and navbar list items color
         if (fromTop > 1) {
             navigationBar.classList.add("change-navbar-color");
             navigationBarListLinks.forEach(e => e.style.color = "var(--dark-color)");
@@ -56,8 +56,14 @@ stickyNavbar();
 function openMenu() {
     mobileMenuIcon.addEventListener('click', () => {
         navigationBar.classList.toggle("active-mobile-menu");
+        navigationBarListLinks.forEach(e => e.style.color = "var(--light-color)");
         navigationBarList.classList.toggle("display");
         websiteName.classList.toggle("hide");
+        if (navigationBar.classList.contains('active-mobile-menu')) {
+            disableScroll();
+        } else {
+            enableScroll();
+        }
         console.log("Clicked mobile menu icon")
     });
 }
@@ -69,11 +75,22 @@ function closeMenu() {
     for (let i = 0; i < navigationBarListItems.length; i++) {
         navigationBarListItems[i].addEventListener('click', () => {
             navigationBar.classList.remove("active-mobile-menu");
+            navigationBarListLinks.forEach(e => e.style.color = "var(--dark-color)");
             navigationBarList.classList.remove("display");
             websiteName.classList.remove("hide");
             console.log("Clicked nav link")
+            enableScroll();
         });
     }
 }
 
 closeMenu();
+
+
+function disableScroll() { 
+    document.body.classList.add("stop-scrolling"); 
+} 
+
+function enableScroll() { 
+    document.body.classList.remove("stop-scrolling"); 
+} 

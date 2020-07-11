@@ -4,7 +4,7 @@
 
 @media (max-width: 1200px) {
   .change-navbar-color{
-    background: #4781ff;
+    /* background: #4781ff; */
   }
 
   /* 00. Global variables & Utility classes */
@@ -32,7 +32,7 @@
 
 @media (max-width: 992px) {
   .change-navbar-color{
-    background: #7bff47;
+    /* background: #7bff47; */
   }
 
   /* 00. Global variables & Utility classes */
@@ -93,7 +93,7 @@
 
 @media (max-width: 768px) {
   .change-navbar-color{
-    background: #fff347;
+    /* background: #fff347; */
   }
 
   /* 00. Global variables & Utility classes */
@@ -117,8 +117,9 @@
     display: none;
   }
 
+  #mobile-contact-us,
   #mobile-menu-icon {
-    display: flex;
+    display: block;
   }
 
   nav > h2 > a,
@@ -315,7 +316,7 @@
 
 @media (max-width: 576px) {
   .change-navbar-color{
-    background: #ff5347;
+    /* background: #ff5347; */
   }
 
   /* 00. Global variables & Utility classes */
