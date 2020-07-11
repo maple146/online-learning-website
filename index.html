@@ -18,8 +18,9 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/mediaqueries.css">
-  <link rel="stylesheet" href="/node_modules/animate.css/animate.css">
-  <link rel="stylesheet" href="/node_modules/aos/dist/aos.css">
+  <!-- <link rel="stylesheet" href="/node_modules/animate.css/animate.css">
+  <link rel="stylesheet" href="/node_modules/aos/dist/aos.css"> -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
   <meta name="theme-color" content="#fafafa">
 </head>
@@ -61,11 +62,11 @@
       <div class="wrapper">
         <div class="header-block">
           <div class="intro-section">
-            <h1>Learn From The Expert</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ipsa nulla sed quis rerum amet natus quas necessitatibus.</p>
-            <p><a class="button-primary" href="#">ADMISSION NOW</a></p>
+            <h1 data-aos="fade-up" data-aos-delay="100">Learn From The Expert</h1>
+            <p  data-aos="fade-up" data-aos-delay="150">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ipsa nulla sed quis rerum amet natus quas necessitatibus.</p>
+            <p  data-aos="fade-up" data-aos-delay="200"><a class="button-primary" href="#">ADMISSION NOW</a></p>
           </div>
-          <form class="form-section" action="">
+          <form class="form-section" action="" data-aos="fade-up" data-aos-delay="150">
             <h2>Join us</h2>
             <div class="form-group">
               <input type="text" placeholder="Email address">
@@ -352,7 +353,8 @@
   <!-- Add your site or application content here -->
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="https://kit.fontawesome.com/bf3de74a9d.js" crossorigin="anonymous"></script>
-  <script src="/node_modules/aos/dist/aos.js"></script>
+  <!-- <script src="/node_modules/aos/dist/aos.js"></script> -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
       AOS.init();
   </script>
