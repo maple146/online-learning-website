@@ -1,0 +1,22 @@
+form {
+  background: $light-color;
+  border-radius: 0.5rem;
+  gap: 1rem;
+}
+
+form h2 {
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  border: none;
+  background-color: $light-color;
+}
+
+.form-group {
+  border: 1px solid $gray-color;
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  background: $light-color;
+}

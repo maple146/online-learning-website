@@ -1,0 +1,641 @@
+@import "config";
+
+/* 
+  ======================================================
+  00. HTML Elements
+  01. Nav
+  02. Header
+  03. Main
+    a.Courses
+    b.Programs
+    c.Teachers
+    d.Why choose us
+    e.Contact
+  04. Footer
+  ====================================================== 
+  */
+
+
+/* 00. HTML Elements */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: $body-font-stack;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+body {
+  margin-top: -6rem; /* Navbar fix */
+  background-color: $light-gray-color;
+  color: $dark-color;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+  color: $dark-gray-color;
+  font-family: $titles-font-stack;
+}
+
+p {
+  color: $dark-gray-color;
+  font-size: 1.1rem;
+}
+
+// Main section grid
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 6rem 100vh auto auto; /* Navbar Header Main Footer */
+}
+// Main section grid
+
+/* 00. HTML Elements */
+
+
+/* 01. Nav */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: sticky;
+  top: 0;
+  padding: 0rem 6rem;
+
+  background: transparent;
+  transition: all 0.5s ease;
+  z-index: 3;
+  
+  ul {
+    display: flex;
+    justify-content: space-between;
+    
+    padding: 0;
+    font-weight: 500;
+    font-size: 1.25rem;
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  a {
+    color: $light-color;
+    margin: 0 1.15rem;
+  }
+
+  h2 {
+    font-weight: 900;
+  }
+}
+
+/* 01. Nav */
+
+
+/* 02. Header */
+
+header {
+  color: $light-color;
+  background-image: url(/img/hero_1.jpg);
+  background-size: cover;
+  box-shadow: inset 0 0 0 1000px rgba(52, 58, 64, 0.9);
+
+  .header-block {
+    display: grid;
+    grid-template-columns: 3.5fr 1fr 3fr;
+    grid-template-rows: 1fr;
+  
+    align-items: center;
+    
+    height: 100%;
+    padding: 2rem;
+  
+    // Custom properties just for this title section
+    .title-section.intro {
+      grid-column: 1/2;
+      padding: 1rem;
+    
+        h1,p{
+          color: $light-color;
+          width: 100%;
+        }
+      
+    }
+  
+    // Custom properties just for this form section
+    .form-section.intro {
+      grid-column: 3/4;
+  
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 0.5fr 1fr 1fr 1fr;
+      padding: 2rem;
+    }
+  }
+}
+
+/* 02. Header */
+
+
+/* 03. Main */
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+
+/* 03. Main */
+
+/* 03.a Courses */
+
+.courses {
+  background: linear-gradient(
+    to bottom,
+    $primary-color 40%,
+    transparent 0%
+  );
+
+  h2 {
+    // Custom property just for this heading
+    color: $light-gray-color;
+  }
+
+  .content-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr;
+
+    a {
+      grid-column: 2/3;
+      margin-top: 2rem;
+      justify-self: center;
+    }
+
+    .course-card {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 200px 0.75fr 0.1fr;
+      background: $light-color;
+      position: relative;
+      top: 0;
+      box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.3);
+      transition: 0.3s all ease-in-out;
+
+      &:hover {
+        position: relative;
+        top: -1rem;
+        box-shadow: 0 10px 20px -1px rgba(0, 0, 0, 0.3);
+        transition: 0.3s all ease-in-out;
+      }
+
+      .course-card-image {
+        background-size: cover;
+
+        &#first-card {
+          background-image: url(/img/img_1.jpg);
+        }
+  
+        &#second-card {
+          background-image: url(/img/img_2.jpg);
+        }
+  
+        &#third-card {
+          background-image: url(/img/img_3.jpg);
+        }
+      }
+
+      .course-card-info {
+        padding: 1.5rem 1rem;
+
+        .total-time {
+          background: $dark-primary-color;
+          color: $light-color;
+          padding: .25rem .5rem;
+        }
+
+        i {
+          font-size: 0.75rem;
+        }
+
+        h2,p {
+          margin: 0.5rem 0rem;
+        }
+
+        h2 {
+          color: $primary-color;
+        }
+      }
+
+      .course-card-stats {
+        display: grid;
+        grid-template-columns: 3.5fr 1fr;
+
+        p {
+          border-top: 1px solid $gray-color;
+          margin: 0;
+          padding: 1rem 1rem;
+          display: flex;
+          align-items: center;
+        }
+
+        .total-students {
+          justify-content: left;
+          border-right: 1px solid $gray-color;
+        }
+
+        .total-comments {
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+/* 03.a Courses */
+
+
+/* 03.b Programs */
+
+.programs {
+
+  .content-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+
+    .program-image {
+      /* https://stackoverflow.com/questions/600743/how-to-get-div-height-to-auto-adjust-to-background-size */
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 0;
+      padding-top: 66.64%;
+
+      &#program-image-one {
+        background-image: url(/img/undraw_youtube_tutorial.svg);
+        grid-column: 1/3;
+        grid-row: 1/2;
+      }
+  
+      &#program-image-two {
+        background-image: url(/img/undraw_teaching.svg);
+        background-position: right;
+        grid-column: 2/4;
+        grid-row: 2/3;
+      }
+  
+      &#program-image-three {
+        background-image: url(/img/undraw_teacher.svg);
+        grid-column: 1/3;
+        grid-row: 3/4;
+      }
+    }
+
+    .program-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      &-stats {
+        color: $primary-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 500;
+      }
+      
+      &#program-info-one {
+        grid-column: 3/4;
+        grid-row: 1/2;
+      }
+      
+      &#program-info-two {
+        grid-column: 1/2;
+        grid-row: 2/3;
+      }
+      
+      &#program-info-three {
+        grid-column: 3/4;
+        grid-row: 3/4;
+      }
+    }
+  }
+}
+
+/* 03.b Programs */
+
+
+/* 03.c Teachers */
+
+.teachers {
+
+  .content-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+
+    .teacher-card {
+      background: $light-color;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 1fr;
+      border: 1px solid $gray-color;
+
+      &-image {
+        height: 150px;
+        width: 150px;
+        border-radius: 100%;
+        display: block;
+        margin: auto;
+        position: relative;
+        margin-top: -50px;
+        background-size: cover;
+
+        &#first-teacher {
+          background-image: url(/img/person_1.jpg);
+        }
+        
+        &#second-teacher {
+          background-image: url(/img/person_2.jpg);
+        }
+        
+        &#third-teacher {
+          background-image: url(/img/person_3.jpg);
+        }
+      }
+
+      &-info {
+        text-align: center;
+        padding: 1rem;
+
+        h2,h3,p {
+          margin: 0.5rem 0rem;
+        }
+
+        h3 {
+          color: $light-primary-color;
+        }
+      }
+    }
+  }
+
+  .parallax {
+    padding: 6rem 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background-image: url(/img/parallax_bg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    box-shadow: inset 0 0 0 1000px rgba(42, 41, 70, 0.75);
+
+    //https://stackoverflow.com/questions/48817028/how-to-make-full-width-div-inside-container
+    width:100vw;
+    margin-left: calc((98% - 100vw) / 2);
+
+    .teacher-card {
+      background: none;
+      border: none;
+      max-width: 50%;
+      border: 1px solid $light-primary-color;
+
+      .teacher-card-image {
+        // !!! Same code than line 359
+        height: 150px;
+        width: 150px;
+        border-radius: 100%;
+        display: block;
+        margin: auto;
+        position: relative;
+        margin-top: -50px;
+        background-size: cover;
+        
+        &#fourth-teacher {
+          background-image: url(/img/person_4.jpg);
+        }
+      }
+
+      &-info {
+        h2,p {
+          color: $light-color;
+        }
+
+        p {
+          font-style: italic;
+        }
+      }
+    }
+  }
+}
+
+/* 03.c Teachers */
+
+
+/* 03.d Why choose us */
+
+.why-choose-us {
+  height: 100vh;
+
+  // This helps to stack the wrapper div above the blobs
+  .wrapper {
+    z-index: 1;
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    .title-section {
+      // !!!
+      height: 12rem;
+    }
+
+    .content-section {
+      display: grid;
+      grid-template-columns: 8rem 25% 75%;
+      padding: 0;
+      // !!!
+      height: calc(100% - 12rem);
+
+      .why-choose-us-box {
+        background: $light-color;
+        width: max-content;
+        height: max-content;
+        padding: 1rem;
+        grid-column: 2/3;
+        box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.2);
+
+        &-stats {
+          color: $dark-gray-color;
+          display: flex;
+          justify-content: left;
+          align-items: center;
+          margin: 1.5rem 0;
+        }
+      }
+
+      .why-choose-us-person {
+        background-image: url(/img/person_transparent.png);
+        background-size: contain;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        height: auto;
+        width: 75%;
+        grid-gap: 2/4;
+      }
+    }
+  }
+
+  /* Blobs background */
+  .blob-container {
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    .blob {
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+
+      &#one {
+        background-image: url(/img/oval_1.svg);
+        top: 0;
+        right: 0;
+        height: 30rem;
+        width: 30rem;
+      }
+      
+      &#two {
+        background-image: url(/img/oval_2.svg);
+        background-position: bottom;
+        bottom: 0;
+        left: -150px;
+        height: 40rem;
+        width: 40rem;
+      }
+    }
+  }
+  /* Blobs background */
+}
+
+/* 03.d Why choose us */
+
+/* 03.e Contact */
+
+.contact {
+  background: $gray-color;
+
+  .title-section,
+  .form-section {
+    padding: 2rem 20%;
+  }
+
+  .title-section {
+    // X
+
+    h2, p {
+      text-align: left;
+      width: 100%;
+    }
+  }
+
+  // Custom properties just for this form section
+  .form-section {
+    display: grid;
+    grid-template-columns: 1fr 0.005fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 6fr 1fr;
+    background: none;
+
+    #first-name.form-group {
+      grid-column: 1/2;
+    }
+    
+    #last-name.form-group {
+      grid-column: 3/4;
+    }
+    
+    #subject.form-group {
+      grid-column: 1/4;
+    }
+    
+    #email.form-group {
+      grid-column: 1/4;
+    }
+    
+    #message.form-group {
+      grid-column: 1/4;
+    }
+  }
+}
+
+/* 03.e Contact */
+
+
+/* 04. Footer */
+
+footer {
+  .content-section {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    padding: 2rem;
+
+    .our-mission-section {
+      grid-column: 1/2;
+    }
+
+    .subscribe-section {
+      grid-column: 2/3;
+
+      &-form {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        .form-group,
+        a {
+          display: flex;
+          align-items: center;
+          border-radius: 0;
+          height: 3rem;
+        }
+
+        .form-group {
+          width: 65%;
+          justify-content: left;
+        }
+
+        a {
+          width: 35%;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+/* 04. Footer */
+
+@import "html5boilerplate";
+@import "utilities";
+@import "buttons";
+@import "form";
+@import "fontawesome";
+@import "mobile";
+// @import 'test';
