@@ -249,6 +249,10 @@ header {
           padding: 1rem 1rem;
           display: flex;
           align-items: center;
+
+          i {
+            color: $primary-color;
+          }
         }
 
         .total-students {
