@@ -12,17 +12,22 @@
 
 ## General info
 
-This project was made to put into practice everything that I know until now.
+I made this project to put into practice everything that I know until now.
 
 I learned a lot of things from this project such as: <br>
 * The difference between relative and absolute positions. <br>
 * How to use z-index to stack an element above another. <br>
 * The importance of color contrast. <br>
-* How to create a parallax scrolling effect. <br>
-* How to create a sticky and responsive navigation bar. <br>
+* Create a parallax scrolling effect. <br>
+* Create a sticky and responsive navigation bar. <br>
+* Use npm to install packages. <br>
 
-Completing this project wasn't hard but very time-consuming, but I'm happy with the final result.<br>
-I'm looking forward to learning more things with the next project.
+This was the first time that I have used SASS and HTML5 Boilerplate.<br> 
+I did a basic usage of it but just being able to nest classes with SASS is awesome.<br>
+I'll tinker around with it to learn how to use it properly for future projects.
+
+
+Completing this project wasn't hard but very time-consuming, but I'm happy with the result. I'm looking forward to learning more things with the next project.
 
 ## Screenshot
 
@@ -33,6 +38,8 @@ I'm looking forward to learning more things with the next project.
 - HTML
 - CSS
 - JS
+- [HTML5 Boilerplate](https://github.com/h5bp/html5-boilerplate)
+- [SASS](https://github.com/sass/sass)
 - [AOS](https://michalsnik.github.io/aos/)
 
 ## Setup
