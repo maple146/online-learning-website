@@ -1,7 +1,5 @@
 # Online Learning Website
 
-> Website made with HTML, CSS and JS.
-
 ## Table of contents
 
 - [General info](#general-info)
@@ -12,22 +10,23 @@
 
 ## General info
 
-I made this project to put into practice everything that I know until now.
+I did this project to put into practice everything I have learned so far.
 
-I learned a lot of things from this project such as: <br>
+The site was written from scratch and the design was taken from [this template](https://colorlib.com/wp/template/oneschool/). <br> I have improved and added a few things to make it more visually appealing.
+
+I learned a lot of things with this project: <br>
 * The difference between relative and absolute positions. <br>
 * How to use z-index to stack an element above another. <br>
 * The importance of color contrast. <br>
-* Create a parallax scrolling effect. <br>
-* Create a sticky and responsive navigation bar. <br>
-* Use npm to install packages. <br>
+* How to create a parallax scrolling effect. <br>
+* How to create a sticky and responsive navigation bar. <br>
+* How to use npm to install packages. <br>
+* How to use SASS (being able to nest classes is awesome)
 
-This was the first time that I have used SASS and HTML5 Boilerplate.<br> 
-I did a basic usage of it but just being able to nest classes with SASS is awesome.<br>
-I'll tinker around with it to learn how to use it properly for future projects.
-
-
-Completing this project wasn't hard but very time-consuming, but I'm happy with the result. I'm looking forward to learning more things with the next project.
+Finishing this project wasn't difficult, but I spent a lot of time writing CSS, so I'll try to use a CSS framework next time.
+<br>
+<br>
+I hope to learn more things with the next project.
 
 ## Screenshot
 
