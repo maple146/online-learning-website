@@ -12,11 +12,14 @@ form h2 {
 input {
   border: none;
   background-color: $light-color;
+  height: 3.5rem;
+  width: 100%;
+  padding: 10px 15px;
+  box-sizing: border-box;
 }
 
 .form-group {
   border: 1px solid $gray-color;
-  padding: 0.75rem;
   border-radius: 0.25rem;
   background: $light-color;
 }

@@ -94,3 +94,8 @@ function disableScroll() {
 function enableScroll() { 
     document.body.classList.remove("stop-scrolling"); 
 } 
+
+function focusInput() {
+    document.getElementById("name").focus();
+    document.documentElement.scrollTop = 0; 
+}
