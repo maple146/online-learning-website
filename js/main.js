@@ -96,6 +96,6 @@ function enableScroll() {
 } 
 
 function focusInput() {
-    document.getElementById("name").focus();
+    document.getElementById("email").focus();
     document.documentElement.scrollTop = 0; 
 }
