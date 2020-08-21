@@ -311,8 +311,8 @@ header {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
-      text-align: center;
+      align-items: flex-start;
+      text-align: left;
 
       &-stats {
         color: $primary-color;
@@ -366,7 +366,7 @@ header {
         display: block;
         margin: auto;
         position: relative;
-        margin-top: -50px;
+        margin-top: -2rem;
         background-size: cover;
 
         &#first-teacher {
