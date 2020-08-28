@@ -192,6 +192,7 @@ header {
       top: 0;
       box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.3);
       transition: 0.3s all ease-in-out;
+      border-radius: 15px;
 
       &:hover {
         position: relative;
@@ -202,6 +203,7 @@ header {
 
       .course-card-image {
         background-size: cover;
+        border-radius: 15px 15px 0px 0px;
 
         &#first-card {
           background-image: url(/img/img_1.jpg);
@@ -357,6 +359,7 @@ header {
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: auto 1fr;
+      border-radius: 15px;
       border: 1px solid $gray-color;
 
       &-image {
@@ -417,6 +420,7 @@ header {
       background: none;
       border: none;
       max-width: 50%;
+      border-radius: 15px 15px 0px 0px;
       border: 1px solid $light-primary-color;
 
       .teacher-card-image {
@@ -442,6 +446,7 @@ header {
 
         p {
           font-style: italic;
+          padding: 0 2rem;
         }
       }
     }
@@ -481,6 +486,7 @@ header {
         height: max-content;
         padding: 1rem;
         grid-column: 2/3;
+        border-radius: 15px;
         box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.2);
 
         &-stats {
