@@ -172,6 +172,18 @@ header {
     color: $light-gray-color;
   }
 
+  
+  .price-tag {
+    background: $dark-primary-color;
+    color: white;
+    width: max-content;
+    padding: .5rem 1rem;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    font-size: 1.3rem;
+  }
+
   .content-section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -202,6 +214,9 @@ header {
       }
 
       .course-card-image {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
         background-size: cover;
         border-radius: 15px 15px 0px 0px;
 
