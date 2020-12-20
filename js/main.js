@@ -1,28 +1,24 @@
 // Nav section
-// #navigation-bar
+
+// Variables
 let navigationBar = document.getElementById("navigation-bar");
-
-    // #website-name
-    let websiteName = document.getElementById("website-name");
-
-    // #navigation-bar-list
-    let navigationBarList = document.getElementById("navigation-bar-list");
-
-        // navigationBarListLinks includes the website name as a link
-        let navigationBarListLinks = document.querySelectorAll(".nav-link"); 
-        let navigationBarListItems = document.querySelectorAll("nav ul li a");
-
-    // #mobile-menu-icon
-    let mobileMenuIcon = document.getElementById("mobile-menu-icon");
-
-// Main section
+let websiteName = document.getElementById("website-name");
+let navigationBarList = document.getElementById("navigation-bar-list");
+// navigationBarListLinks includes the website name as a link
+let navigationBarListLinks = document.querySelectorAll(".nav-link"); 
+let navigationBarListItems = document.querySelectorAll("nav ul li a");
+let mobileMenuIcon = document.getElementById("mobile-menu-icon");
 let mainSections = document.querySelectorAll("main section");
+
+
+// Sticky navbar
+// This function will change the navbar background color and size when it's scrolled
+// and will highlight the currect section on display.
 
 function stickyNavbar() {
     window.addEventListener("scroll", () => {
         let fromTop = window.scrollY;
-
-        // Change navbar background color and navbar list items color
+        // Change navbar background color and navbar list items color on scroll
         if (fromTop > 1) {
             navigationBar.classList.add("change-navbar-color");
             navigationBarListLinks.forEach(e => e.style.color = "#414141");
@@ -30,15 +26,13 @@ function stickyNavbar() {
             navigationBar.classList.remove("change-navbar-color");
             navigationBarListLinks.forEach(e => e.style.color = "#fafafa");
         }
-
-        // Change navbar size
+        // Change navbar size on scroll
         if (fromTop > 50) {
             document.getElementById("navigation-bar").style.height = "4rem";
         } else {
             document.getElementById("navigation-bar").style.height = "6rem";
         }
-
-        // Highlight list current active item
+        // Highlight list current active item based on the current section
         navigationBarListItems.forEach(link => {
             let section = document.querySelector(link.hash);
             if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
@@ -49,9 +43,15 @@ function stickyNavbar() {
         });
     });
 }
-
 stickyNavbar();
 
+
+
+// ### Custom mobile navbar menu ###
+
+// This function will execute when you open the mobile navbar menu
+// It's going to create a menu that will fill the entire screen, disable scrolling
+// and display all the navbar items on a column. 
 
 function openMenu() {
     mobileMenuIcon.addEventListener('click', () => {
@@ -67,9 +67,11 @@ function openMenu() {
         console.log("Clicked mobile menu icon")
     });
 }
-
 openMenu();
 
+
+// This function will execute when you close the mobile navbar menu
+// This will undo all the previous styles changes and return navbar to normal.
 
 function closeMenu() {
     for (let i = 0; i < navigationBarListItems.length; i++) {
@@ -83,19 +85,18 @@ function closeMenu() {
         });
     }
 }
-
 closeMenu();
 
 
 function disableScroll() { 
-    document.body.classList.add("stop-scrolling"); 
+  document.body.classList.add("stop-scrolling"); 
 } 
 
 function enableScroll() { 
-    document.body.classList.remove("stop-scrolling"); 
+  document.body.classList.remove("stop-scrolling"); 
 } 
 
 function focusInput() {
-    document.getElementById("email").focus();
-    document.documentElement.scrollTop = 0; 
+  document.getElementById("email").focus();
+  document.documentElement.scrollTop = 0; 
 }

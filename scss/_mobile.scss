@@ -3,24 +3,17 @@
 /* ######################## */
 
 @media (max-width: 1280px) {
-  .change-navbar-color {
-    // background: #4781ff;
-  }
-
   /* 00. HTML Elements */
   html {
     font-size: 0.95rem;
   }
-
   /* 01. Nav */
   nav {
     padding: 0rem 1rem;
-
     ul {
       font-size: 1.15rem;
     }
   }
-
   .content-section {
     gap: 2rem;
     padding: 3rem 2rem;
@@ -32,15 +25,10 @@
 /* ######################## */
 
 @media (max-width: 992px) {
-  .change-navbar-color {
-    // background: #7bff47;
-  }
-
   /* 00. HTML Elements */
   html {
     font-size: 0.9rem;
   }
-
   // Utilities
   .content-section {
     gap: 0.75rem;
@@ -50,10 +38,8 @@
   /* 01. Nav */
   nav {
     padding: 0rem 0.25rem;
-
     ul {
       font-size: 1.1rem;
-
       li {
         a {
           margin: 0rem 0.5rem;
@@ -76,10 +62,8 @@
     .content-section {
       padding: 6rem 1rem 2rem 1rem;
     }
-
     .parallax {
       padding: 4rem 0rem;
-
       .teacher-card {
         max-width: 75%;
       }
@@ -89,23 +73,15 @@
   /* 03.d Why choose us */
   .why-choose-us {
     .wrapper {
-      .title-section {
-        // background: rgba(0, 17, 255, 0.24);
-      }
-
       .content-section {
-        // background: rgba(255, 0, 200, 0.24);
         display: grid;
         grid-template-columns: 2rem 0.5fr 1.5fr;
-
         .why-choose-us-box {
           grid-column: 2/3;
-
           p {
             margin: 1rem 0;
           }
         }
-
         .why-choose-us-person {
           grid-column: 3/4;
         }
@@ -119,10 +95,6 @@
 /* ########################################## */
 
 @media (max-width: 768px) {
-  .change-navbar-color {
-    // background: #fff347;
-  }
-
   /* 01. Nav */
   nav {
     padding: 0rem 2rem;
@@ -131,7 +103,6 @@
     a.button-primary {
       display: none;
     }
-
     #mobile-contact-us,
     #mobile-menu-icon {
       display: block;
@@ -143,7 +114,6 @@
     .wrapper {
       display: flex;
       justify-content: center;
-
       .header-block {
         display: grid;
         grid-template-columns: 1fr;
@@ -151,20 +121,16 @@
         justify-content: center;
         align-items: center;
         width: 75%;
-
         .title-section {
           grid-column: 1/2;
           grid-row: 1/2;
-
           h1{
             font-size: 2.25rem;
           }
         }
-
         .form-section {
           grid-column: 1/2;
           grid-row: 2/3;
-
           h2,
           p {
             text-align: center;
@@ -178,24 +144,16 @@
     .why-choose-us {
       height: 100%;
       .wrapper {
-        .title-section {
-          // background: rgba(0, 17, 255, 0.24);
-        }
-  
         .content-section {
-          // background: rgba(255, 0, 200, 0.24);
           display: grid;
           grid-template-columns: 2rem 0.5fr 1.5fr;
-  
           .why-choose-us-box {
             grid-column: 2/3;
             margin-bottom: 22rem;
-  
             p {
               margin: 1rem 0;
             }
           }
-  
           .why-choose-us-person {
             grid-column: 3/4;
           }
@@ -218,12 +176,10 @@
       .content-section {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
-
         .our-mission-section {
           grid-column: 1/2;
           grid-row: 1/2;
         }
-
         .subscribe-section {
           grid-column: 1/2;
           grid-row: 2/3;
@@ -238,10 +194,6 @@
 /* ########################### */
 
 @media (max-width: 576px) {
-  .change-navbar-color {
-    /* background: #ff5347; */
-  }
-
   /* 00. HTML Elements */
   html {
     font-size: 0.8rem;
@@ -264,12 +216,9 @@
         width: 100%;
         padding: 1rem;
         align-items: flex-end;
-        // background: rgba(255, 0, 0, 0.37);
-
         .title-section.intro {
           padding: 0;
         }
-
         form {
           gap: 0.5rem;
         }
@@ -283,25 +232,19 @@
       display: grid;
       grid-template-columns: auto 1fr auto;
       grid-template-rows: 1fr 1fr 1fr auto;
-      // background: rgba(255, 0, 0, 0.281);
-
       .course-card {
         grid-column: 2/3;
         transition: none;
-
         &:nth-child(1) {
           grid-row: 1/2;
         }
-
         &:nth-child(2) {
           grid-row: 2/3;
         }
-
         &:nth-child(3) {
           grid-row: 3/4;
         }
       }
-
       a {
         grid-column: 2/3;
         grid-row: 4/5;
@@ -315,27 +258,22 @@
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-
       .program-image {
         padding-top: 100%;
-        // background: rgba(255, 0, 0, 0.356);
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
         grid-column: 1/2;
-
         &#program-image-one {
           background-image: url(/img/undraw_youtube_tutorial.svg);
           grid-column: 1/2;
           grid-row: 1/2;
         }
-
         &#program-image-two {
           background-image: url(/img/undraw_teaching.svg);
           grid-column: 1/2;
           grid-row: 3/4;
         }
-
         &#program-image-three {
           background-image: url(/img/undraw_teacher.svg);
           grid-column: 1/2;
@@ -344,32 +282,23 @@
       }
 
       .program-info {
-        // background: rgba(0, 47, 255, 0.356);
         grid-column: 1/2;
         text-align: center;
         align-items:center;
-
         &#program-info-one {
           grid-column: 1/2;
           grid-row: 2/3;
         }
-
         &#program-info-two {
           grid-column: 1/2;
           grid-row: 4/5;
         }
-
         &#program-info-three {
           grid-column: 1/2;
           grid-row: 6/7;
         }
-
         &-stats {
           font-size: 1.3rem;
-
-          // i {
-          //   display: none;
-          // }
         }
       }
     }
@@ -413,7 +342,6 @@
         }
       }
     }
-
     .blob-container {
       display: none;
     }
@@ -434,8 +362,6 @@
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr 6fr 1fr;
         .form-group {
-          
-          // Fix later
           &#first-name {
             grid-column: 1/2;
           }
